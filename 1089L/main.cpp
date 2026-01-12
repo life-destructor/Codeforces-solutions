@@ -10,12 +10,10 @@ int main () {
 
     for (int i = 0; i < n; i++) {
         cin >> jobs[i];
-        // cin >> time[i];
         if (find(jobs.begin(), jobs.begin() + i, jobs[i]) != jobs.begin() + i) {
             // this means this value has already been entered
 
             thisIndex.push_back(i);
-            // fkingIdlers.push_back(time[i]);
             // now with this, I know the times of all duplicates.
         }
     }
@@ -47,12 +45,6 @@ int main () {
         total += fkingIdlers[i];
     }
     cout << total;
-
-
-
-    // int numberOfJobsWithMoreIdlers = count_if(numberOfPeople.begin(), numberOfPeople.end(), [temp](int n) {
-    //     return n > 1;
-    // });
 
     return 0;
 }
